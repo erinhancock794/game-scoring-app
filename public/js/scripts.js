@@ -1,5 +1,5 @@
 console.log('public script running');
 
-fetch('.netlify/functions/helloWorld')
-.then(res => res.json())
-.then(data => console.log('data-->', data));
+// fetch('.netlify/functions/helloWorld')
+// .then(res => res.json())
+// .then(data => console.log('data-->', data));
