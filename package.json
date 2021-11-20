@@ -1,0 +1,20 @@
+{
+  "name": "game-scoring-app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "netlify dev"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/erinhancock794/game-scoring-app.git"
+  },
+  "author": "Erin Hancock",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/erinhancock794/game-scoring-app/issues"
+  },
+  "homepage": "https://github.com/erinhancock794/game-scoring-app#readme"
+}
