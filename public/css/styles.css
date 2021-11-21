@@ -11,9 +11,16 @@
  }
  
  #new-game-form,
- #saved-game-form {
+ #saved-game-form,
+ #game-scoring-card {
      padding: 20px;
      margin-bottom: 2px;
      border: 2px solid black;
      border-radius: 10px;
+ }
+ 
+ #editScoreModal {
+     /* display: flex; */
+     /* align-content: center; */
+     /* flex-direction: column; */
  }
