@@ -55,14 +55,7 @@
 
         console.log('add post data--->', data);
   
-      });
-    // fetch(".netlify/functions/newGame", {
-    //   method: "POST",
-    //   body: JSON.stringify(newGameData),
-    //   headers: getHeaders(),
-    // })
-    //   .then((res) => res.json())
-    //   .then((data) => console.log("newGame data-->", data));
+      });   
   }
 
 

@@ -42,9 +42,6 @@ app.get("/", async (req, res) => {
 });
 
 app.post('/', async (req, res) => {
-  console.log("POST ADD HIT----");
-  //   const gameData = JSON.parse(req.body)
-  //   console.log('gameData--', gameData);
   console.log("req body", req.body);
   let formatGame;
   await Game.findOne({ id: gameData.id }).then(async (duplicate) => {
