@@ -3,8 +3,11 @@
 
   const gameDatabase = [];
 
-  fetch('/get')
-  .then((res) => res.json())
+  fetch('/')
+  .then((res) => {
+    res.json()
+    console.log('res-----', res)
+  })
   .then((data) => {
       console.log('getdata--->', data)
       return data;
@@ -41,7 +44,7 @@
   function submitNewGameInput(newGameData) {
     console.log("newGameData----", newGameData);
 
-    fetch('/add', {
+    fetch('/', {
         method: "POST",
         body: JSON.stringify(newGameData)
       }).then((res) => {
@@ -62,9 +65,7 @@
     //   .then((data) => console.log("newGame data-->", data));
   }
 
-//   fetch(".netlify/functions/helloWorld")
-//     .then((res) => res.json())
-//     .then((data) => console.log("data-->", data));
+
 
   function getHeaders() {
     return {

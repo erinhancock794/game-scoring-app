@@ -2,7 +2,6 @@ const express = require("express");
 const bodyParser = require("body-parser");
 const _ = require("lodash");
 const port = 5000;
-const app = express();
 
 const mongoose = require("mongoose");
 const { mongoURI } = require("./config");
@@ -13,12 +12,14 @@ mongoose
     useNewUrlParser: true,
     useUnifiedTopology: true,
   })
-//   .then(() => {
-//     app.listen(port, () => {
-//       console.log(`you are connected listening on port ${port}`);
-//     });
-//   })
+  .then(() => {
+    app.listen(port, () => {
+      console.log(`you are connected listening on port ${port}`);
+    });
+  })
   .catch(console.error);
+
+  const app = express();
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
@@ -32,14 +33,15 @@ const getAllGames = async () => {
   return allGames;
 };
 
-app.get("/get", async (req, res) => {
+app.get("/", async (req, res) => {
     console.log('get request in server')
   await getAllGames().then((result) => {
-    res.status(200).json(result);
+      console.log('result---', result)
+    return res.status(200).json(result);
   });
 });
 
-app.post('/add', async (req, res) => {
+app.post('/', async (req, res) => {
   console.log("POST ADD HIT----");
   //   const gameData = JSON.parse(req.body)
   //   console.log('gameData--', gameData);
